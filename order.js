@@ -114,4 +114,11 @@ function showReceipt() {
   receipt.id = "receipt";
   receipt.textContent = text;
   summaryDiv.append(receipt);
+
+
+  const pdfBtn = document.createElement("button");
+  pdfBtn.textContent = "Download PDF";
+  pdfBtn.id = "pdfBtn";
+  pdfBtn.addEventListener("click", () => window.print());
+  receipt.append(pdfBtn);
 }
